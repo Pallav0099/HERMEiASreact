@@ -77,7 +77,7 @@ const Stars = () => {
 const StarrySky = () => {
   return (
     <Canvas
-      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} // Ensure canvas covers hero section
+      style={{ position: 'absolute', zIndex:0, top: 0, left: 0, width: '100%', height: '100%' }} // Ensure canvas covers hero section
       camera={{ position: [0, 0, 10] }}
     >
       <Stars />
