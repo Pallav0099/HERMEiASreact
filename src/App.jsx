@@ -1,9 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
-import OurTeam from "./components/OurTeam";
-import { Paragraph1 } from "./components/Manifesto";
-import { Paragraph2 } from "./components/Manifesto";
+import About from "./components/About";
 const App = () => {
   return (
     <>
@@ -16,9 +14,7 @@ const App = () => {
             <div>
               <Header />
               <Hero />
-              <Paragraph1 />
-              <Paragraph2 />
-              <OurTeam />
+              <About />
             </div>
           }
         />

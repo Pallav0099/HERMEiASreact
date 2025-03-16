@@ -1,22 +1,27 @@
-import svg from "../assets/react.svg";
-import ParticleCanvas from "../design/ParticleCanvas";
+import { Spotlight } from "../design/Spotlight";
+import { StarsBackground } from "../design/StarsBackground";
+import { ShootingStars } from "../design/ShootingStars"
 
 const Hero = () => {
     return (
-        <div>
-            <div id="hero" className="bg-black-4 flex flex-col items-center text-center px-6 py-12 z- lg:grid lg:grid-cols-2 lg:items-center lg:text-left lg:px-10 lg:py-20">
-                {/* Right Side - Image*/}
-                <div className="flex justify-center mt-40 lg:justify-end lg:order-2">
-                    <img src={svg} alt="Hero" className="w-32 sm:w-40 md:w-48 lg:w-56 motion-preset-wiggle" />
-                </div>
-
-                {/* Left Side - Text*/}
-                <div className="mt-10 lg:mt-85 lg:order-1">
-                    <p className="motion-preset-fade text-6xl sm:text-7xl md:text-8xl font-bold text-white lg:ml-30">Hermeias</p>
-                    <p className="text-lg sm:text-xl md:text-2xl text-white py-4 lg:ml-31">Open and Private.</p>
+        <div className="relative w-full overflow-hidden">
+            {/* Spotlight Container */}
+            <div className="absolute inset-0 z-0">
+                <Spotlight />
+            </div>
+            
+            <div id="hero" className="bg-black-4 flex items-center align-middle justify-center min-h-[60vh] lg:min-h-[80vh] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28 z-10">
+                <div className="relative text-center max-w-7xl mx-auto space-y-1">
+                    <p className="text-5xl lg:text-6xl xl:text-7xl font-semibold text-white/90 motion-blur-in-2xl motion-opacity-in-0 motion-duration-2000">
+                        HERMEiAS
+                    </p>
+                    <p className="text-md lg:text-lg xl:text-xl text-white/80 motion-blur-in-2xl motion-opacity-in-0 motion-duration-2000 motion-delay-300">
+                        OPEN AND PRIVATE.
+                    </p>
                 </div>
             </div>
-            <ParticleCanvas />
+            <StarsBackground />
+            <ShootingStars />
         </div>
     );
 };
