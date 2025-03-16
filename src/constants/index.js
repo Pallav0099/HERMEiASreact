@@ -20,4 +20,4 @@ export const navigation = [
         title: "Contact",
         url: "/contact",
     },
-]
+];

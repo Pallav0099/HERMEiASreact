@@ -7,7 +7,7 @@ const Hero = () => {
             <div id="hero" className="bg-black-4 flex flex-col items-center text-center px-6 py-12 z- lg:grid lg:grid-cols-2 lg:items-center lg:text-left lg:px-10 lg:py-20">
                 {/* Right Side - Image*/}
                 <div className="flex justify-center mt-40 lg:justify-end lg:order-2">
-                    <img src={svg} alt="Hero" className="w-32 sm:w-40 md:w-48 lg:w-56 motion-preset-spin" />
+                    <img src={svg} alt="Hero" className="w-32 sm:w-40 md:w-48 lg:w-56 motion-preset-wiggle" />
                 </div>
 
                 {/* Left Side - Text*/}
