@@ -46,7 +46,7 @@ const Header = () => {
                                 key={item.id}
                                 href={item.url}
                                 onClick={handleClick}
-                                className={`block relative font-code text-2xl uppercase text-gray-500 transition-colors hover:text-white ${item.onlyMobile ? "lg:hidden" : ""
+                                className={`block relative font-code text-2xl uppercase text-gray-500 transition-colors hover:text-white motion-scale-x-in-150 motion-blur-in-xl motion-duration-300 ${item.onlyMobile ? "lg:hidden" : ""
                                     } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url === pathname.hash
                                         ? "z-2 lg:text-white"
                                         : "lg:text-white/50"
@@ -54,7 +54,7 @@ const Header = () => {
                             >
                                 {item.title}
                             </a>
-                        ))}
+                        ))};
                     </div>
 
                     <HamburgerMenu />
