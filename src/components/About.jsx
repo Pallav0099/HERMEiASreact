@@ -2,7 +2,7 @@ import { Paragraph1, Paragraph2 } from "./Manifesto";
 import OurTeam from "./OurTeam";
 const About = () => {
   return (
-    <div>
+    <section id="about" className="relative z-10">
         <Paragraph1 />
         <Paragraph2 />
         <ul>
@@ -12,7 +12,7 @@ const About = () => {
             <li></li>
         </ul>
         <OurTeam />
-    </div>
+    </section>
   );
 };
 

@@ -8,13 +8,13 @@ const paragraph2 = `At Hermeias, we are committed to creating tools and applicat
 
 export function Paragraph1() {
   return (
-    <TextGenerateEffect className="font-bold px-8 lg:px-20" duration={0.5} filter={true} words={paragraph1} />
+    <TextGenerateEffect className="font-bold px-5 lg:px-20 text-md lg:text-lg" duration={0.5} filter={true} words={paragraph1} />
   );
 }
 
 export function Paragraph2() {
   return (
-    <TextGenerateEffect className="px-8 lg:px-20" delay={2} duration={1.5} filter={true} words={paragraph2} />
+    <TextGenerateEffect className="px-5 lg:px-20 text-md lg:text-lg" delay={2} duration={1.5} filter={true} words={paragraph2} />
   );
 }
 
