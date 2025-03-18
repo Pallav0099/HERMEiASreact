@@ -8,6 +8,7 @@ const listVariants = {
         transition: {
             duration: 1,
             staggerChildren: 0.2,
+            delay: 0.2,
         },
     },
 };
@@ -24,9 +25,8 @@ const StaggeredList = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ margin: "-100px", once: true }}
-            className="pl-5 list-disc space-y-3 mb-10"
+            className="pl-5 list-disc space-y-3 mb-3"
         >
-            <motion.p variants={listItemVariants}>We Believe.</motion.p>
             <motion.li variants={listItemVariants}>
                 <p className="text-white/90">
                     <strong>Privacy is a Human Right</strong>: Every conversation you have, every idea you share, should remain your own. We will never compromise your privacy for profit.

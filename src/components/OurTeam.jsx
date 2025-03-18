@@ -2,29 +2,47 @@ import { motion } from "motion/react";
 import { Paragraph1, Paragraph2, Manifesto } from "./Manifesto";
 import StaggeredList from "../design/StaggeredList";
 
+const listVariants = {
+  hidden: { opacity: 0, filter: "blur(20px)" },
+  show: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+      delay: 0.1,
+    },
+  },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 const OurTeam = () => {
   const teamMembers = [
     {
       name: "Suryansh Nandwani",
-      role: "CEO",
+      role: "idk man",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
     {
       name: "Ariyan Basu",
-      role: "CTO",
+      role: "AI/ML Dev",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
     {
       name: "Saptarshi Paul",
-      role: "CIO",
+      role: "Backend Dev",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
     {
       name: "Pallav Singh",
-      role: "Project Manager",
+      role: "Frontend Dev",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
@@ -36,9 +54,42 @@ const OurTeam = () => {
         <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 md:gap-4 lg:grid-cols-4">
           <div className="col-span-2 md:col-span-4">
             <Manifesto />
-            <Paragraph1 />
-            <Paragraph2 />
+            <motion.ul
+              variants={listVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ margin: "-100px", once: true }}
+              className="space-y-2 mb-2 mt-3"
+            >
+              <motion.li variants={listItemVariants}><p className="text-white/90">In a world where our conversations are increasingly monitored, tracked, and commodified, your data catagorized and sold we stand for something different. We believe that privacy is not a luxury — it's a fundamental right.</p></motion.li>
+              <motion.li variants={listItemVariants} className="pb-3">
+                <p className="text-white/90">
+                At <strong>Hermeias</strong>, we are committed to creating tools and applications that put you in control. Our goal is simple: to empower individuals with secure and affordable tools from localized AI to messaging that is free from surveillance, advertising, or hidden agendas.
+                </p>
+              </motion.li>
+              <motion.li variants={listItemVariants}>
+                <p className="text-white">
+                  We Believe.
+                </p>
+              </motion.li>
+            </motion.ul>
             <StaggeredList />
+            <motion.ul
+              variants={listVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ margin: "-100px", once: true }}
+              className="space-y-6 mb-5 pt-3"
+            >
+              <motion.li variants={listItemVariants}>
+                <p className="text-white/90">In a world that increasingly threatens personal privacy, we offer a different path: one where you control your data, your messages, and your freedom to communicate without fear. With us, privacy isn't an afterthought — it's the foundation of everything we do.</p>
+              </motion.li>
+              <motion.li variants={listItemVariants}>
+                <p className="text-white">
+                Welcome to a new era of messaging. Welcome to privacy. Welcome to <strong>Hermeias</strong>.
+                </p>
+              </motion.li>
+            </motion.ul>
           </div>
           {teamMembers.map((member, index) => (
             <motion.div

@@ -11,7 +11,7 @@ export const TextGenerateEffect = ({
   delay = 0,
 }) => {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { once: true, margin: "200px" });
+  const isInView = useInView(scope, { once: true, margin: "-100px" });
   const wordsArray = words.split(" ");
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const TextGenerateEffect = ({
         },
         {
           duration: duration || 1,
-          delay: stagger(0.04),
+          delay: stagger(0.05),
         }
       );
     }, delay * 1000);

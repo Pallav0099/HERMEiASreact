@@ -14,7 +14,7 @@ export function Manifesto() {
 }
 export function Paragraph1() {
   return (
-    <TextGenerateEffect className="text-md lg:text-lg mb-5" duration={0.5} filter={true} words={paragraph1} />
+    <TextGenerateEffect className="text-md lg:text-lg mb-3" duration={0.4} filter={true} words={paragraph1} />
   );
 }
 

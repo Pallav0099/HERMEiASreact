@@ -19,7 +19,7 @@ const Products = () => {
                                 delay: 0.1
                             }
                         }}
-                        viewport={{ margin: "-100px", once: true }}
+                        viewport={{ amount: 0.3, once: true }}
                         className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
                     >
                         <div className="w-full row-1 px-3 mt-6 mb-4">
@@ -48,7 +48,7 @@ const Products = () => {
                                 delay: 0.3
                             }
                         }}
-                        viewport={{ margin: "-100px", once: true }}
+                        viewport={{ amount: 0.3, once: true }}
                         className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
                     >
                         <div className="w-full row-1 px-3 mt-6 mb-4">
@@ -77,7 +77,7 @@ const Products = () => {
                                 delay: 0.5
                             }
                         }}
-                        viewport={{ margin: "-100px", once: true }}
+                        viewport={{ amount: 0.3, once: true }}
                         className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
                     >
                         <div className="w-full row-1 px-3 mt-6 mb-4">
