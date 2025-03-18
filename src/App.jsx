@@ -6,9 +6,7 @@ import Products from "./components/Products"
 const App = () => {
   return (
     <>
-      {/* Routes should be the main container */}
       <Routes>
-        {/* Home Page Route */}
         <Route
           path="/"
           element={
