@@ -3,10 +3,9 @@ import { motion } from "motion/react";
 
 const Products = () => {
     return (
-        <section id="Products" className="pt-12 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <section id="Products" className="pt-12 px-4 sm:px-6 pb-12 lg:px-8 xl:px-12">
             <div className="max-w-7xl mt-[10vh] mx-auto">
-                <p className="text-2xl mb-4 text-white">OUR PRODUCTS</p>
-
+                <p className="text-xl md:text-2xl mb-5 text-white text-center motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500 motion-delay-700">OUR PRODUCTS</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center">
                     {/* Mystiko */}
                     <motion.div

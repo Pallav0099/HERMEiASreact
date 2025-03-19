@@ -12,10 +12,10 @@ const Hero = () => {
             
             <div id="hero" className="bg-black-4 flex items-center align-middle justify-center min-h-[60vh] xl:min-h-[70vh] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28 z-10">
                 <div className="relative text-center max-w-7xl mx-auto space-y-1">
-                    <p className="text-5xl lg:text-6xl xl:text-7xl font-semibold text-white/90 motion-blur-in-2xl motion-opacity-in-0 motion-duration-2000">
+                    <p className="text-5xl lg:text-6xl xl:text-7xl font-semibold text-white/90 motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500">
                         HERMEiAS
                     </p>
-                    <p className="text-md lg:text-lg xl:text-xl text-white/80 motion-blur-in-2xl motion-opacity-in-0 motion-duration-2000 motion-delay-300">
+                    <p className="text-md lg:text-lg xl:text-xl text-white/80 motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500 motion-delay-200">
                         OPEN AND PRIVATE.
                     </p>
                 </div>
