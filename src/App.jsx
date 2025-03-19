@@ -1,28 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Hero from "./components/Hero";
-import Header from "./components/Header";
-import About from "./components/About";
-import Products from "./components/Products";
-import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 const App = () => {
   return (
     <>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <Header />
-              <Hero />
-              <Products />
-              <About />
-              <Footer />
-            </div>
-          }
-        />
-
-        {/* DemoLe Page Route */}
-        
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </>
   );
