@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: "Suryansh Nandwani",
-      role: "idk man",
+      name: "Ishita Singh",
+      role: "COO",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
