@@ -6,6 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss(), react()],
   server: {
-    allowedHosts: ['remix-tender-mid-collectables.trycloudflare.com'],
+    allowedHosts: ['bet-conspiracy-salmon-tf.trycloudflare.com'],
   },
 })
