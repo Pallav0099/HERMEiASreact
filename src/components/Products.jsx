@@ -90,7 +90,7 @@ const Products = () => {
                             </p>
                         </div>
                         <div className="px-3 row-3 mt-10 mb-6">
-                            <Button white href="#DemoLe">Learn More</Button>
+                            <Button white href="/DemoLe">Learn More</Button>
                         </div>
                     </motion.div>
                 </div>
