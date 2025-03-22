@@ -41,6 +41,9 @@ const DemoLeHero = () => {
 
     return (
         <div ref={mainRef} className="sticky top-[5rem] w-full lg:px-15 overflow-hidden mb-40">
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <Spotlight />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="order-2 md:order-1 flex items-center justify-center align-middle text-center max-w-7xl mx-auto space-y-1">
                     <TextGenerateEffect
@@ -57,10 +60,8 @@ const DemoLeHero = () => {
                     </Canvas>
                 </div>
             </div>
-            {/*
-      <StarsBackground />
-      <ShootingStars />
-      */}
+            <StarsBackground />
+            <ShootingStars />
         </div>
     );
 };
