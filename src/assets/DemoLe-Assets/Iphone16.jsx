@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export function Iphone16(props) {
   const { nodes, materials } = useGLTF('./iphone16.glb')
   return (
-    <group {...props} dispose={null}>
+    <group scale={[3,3,3]} {...props} dispose={null}>
       <group scale={0.01}>
         <group position={[-0.328, 2.26, 0.199]} rotation={[-Math.PI / 2, 0, 0]} scale={100}>
           <mesh
