@@ -1,65 +1,62 @@
+'use client'
+import React, { useState, useEffect } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Canvas } from "@react-three/fiber";
+import DemoLePhone from "../design/DemoLePhone";
 import { Spotlight } from "../design/Spotlight";
 import { StarsBackground } from "../design/StarsBackground";
 import { ShootingStars } from "../design/ShootingStars";
 import { TextGenerateEffect } from "../design/TextGenerateEffect";
-import { useState, useRef, useEffect } from 'react';
-import { Canvas } from "@react-three/fiber";
-import DemoLePhone from "../design/DemoLePhone";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const DemoLeHero = () => {
-    const mainRef = useRef(null);
-    const phoneRef = useRef(null);
-    const [progress, setProgress] = useState(0);
-    const [heroText, setHeroText] = useState('Democratizing Legal Assistance.');
+    // Get the overall scroll progress
+    const { scrollYProgress } = useScroll();
+    const [words, setWords] = useState("Democratizing Legal Assistance");
+
+    {/**  DEV NOTES
+    Create a transform for the canvas container's Y translation.
+    Here we keep it at 0% until scrollYProgress is 0.5, then smoothly move it up.
+    Adjust the range values ("0%", "-100%") as needed for your effect. */}
+
     useEffect(() => {
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: mainRef.current,
-                start: "top top",
-                end: "50vh",
-                scrub: 1,
-                onUpdate: (self) => {
-                    setProgress(self.progress);
-                    if (self.progress >= 1) {
-                        setHeroText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam, vel volutpat quam maximus.")
-                    } else {
-                        setHeroText("Democratizing Legal Assistance");
-                    }
-                }
+        return scrollYProgress.onChange((latest) => {
+            if (latest >= 0.4) {
+                setWords('Blah Blah Blah Blah Blah Lorem Ipsum');
+            } else {
+                setWords('Democratizing Legal Assistance');
             }
-        })
-            .to(phoneRef.current, {
-                ease: "none",
-                x: '0',
-                y: "0"
-            });
-    }, []);
+        });
+    }, [scrollYProgress]);
+
+    const translateY = useTransform(
+        scrollYProgress,
+        [0.5, 0.8], // change these values for when the transition should occur
+        ["0%", "-100%"]
+    );
 
     return (
-        <div ref={mainRef} className="sticky top-[5rem] w-full lg:px-15 overflow-hidden mb-40">
-            <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="w-full lg:px-15 overflow-hidden mb-40 min-h-[150vh] sticky top-[5rem]">
+            {<div className="absolute inset-0 z-0 pointer-events-none">
                 <Spotlight />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="order-2 md:order-1 flex items-center justify-center align-middle text-center max-w-7xl mx-auto space-y-1">
+            </div>}
+            <motion.div style={{ translateY }} className="grid grid-cols-1 md:grid-cols-2">
+                <div className="order-2 md:order-1 flex items-center justify-center text-center max-w-7xl mx-auto space-y-1">
                     <TextGenerateEffect
-                        key={heroText}
-                        words={heroText}
+                        key={words}
+                        words={words}
                         duration={1.5}
                         delay={0.3}
                         className="text-3xl lg:text-4xl xl:text-6xl font-semibold text-white/90 motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500"
                     />
                 </div>
-                <div className="grid order-1 md:order-2 min-h-[70vh]">
+                <div
+                    className="order-1 md:order-2 min-h-[70vh]"
+                >
                     <Canvas>
-                        <DemoLePhone progress={progress} className="motion-preset-slide-up-md motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500 motion-delay-500" />
+                        <DemoLePhone shadows />
                     </Canvas>
                 </div>
-            </div>
+            </motion.div>
             <StarsBackground />
             <ShootingStars />
         </div>
