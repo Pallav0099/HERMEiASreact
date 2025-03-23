@@ -10,7 +10,7 @@ const OurTeam = () => {
     },
     {
       name: "Ariyan Basu",
-      role: "AI/ML Dev",
+      role: "GEN AI Dev",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
