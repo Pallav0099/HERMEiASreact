@@ -2,13 +2,13 @@ import DemoLeHero from "../components/DemoLeHero";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import DemoLeDescription from "../components/DemoLeDescription";
+import DemoLeProductDescription from "../components/DemoLeProductDescription";
 const DemoLe = () => {
     return (
         <div>
             <Header />
             <DemoLeHero />
-            <DemoLeDescription />
+            <DemoLeProductDescription />
             <Footer />
         </div>
     );

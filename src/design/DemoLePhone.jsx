@@ -8,9 +8,9 @@ const DemoLePhone = () => {
     const { camera } = useThree()
     const { scrollYProgress } = useScroll()
 
-    const x = useTransform(scrollYProgress, [0, 0.5], [-6.92, -9.108493862362037]);
-    const y = useTransform(scrollYProgress, [0, 0.5], [-0.0057, 0.1872756154044498]);
-    const z = useTransform(scrollYProgress, [0, 0.5], [5.92, 0.016352467306954218]);
+    const x = useTransform(scrollYProgress, [0, 0.3, 0.6], [-6.92, -9.108493862362037, -6.92]);
+    const y = useTransform(scrollYProgress, [0, 0.3, 0.6], [-0.0057, 0.1872756154044498, -0.0057]);
+    const z = useTransform(scrollYProgress, [0, 0.3, 0.6], [5.92, 0.016352467306954218, -5.92]);
 
 
     useFrame(() => {
