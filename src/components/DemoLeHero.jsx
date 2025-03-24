@@ -12,6 +12,7 @@ const DemoLeHero = () => {
     // Get the overall scroll progress
     const { scrollYProgress } = useScroll();
     const [words, setWords] = useState("Democratizing Legal Assistance");
+    const [screenWidth] = useState(window.innerWidth);
 
     {/**  DEV NOTES
     Create a transform for the canvas container's Y translation.
@@ -20,7 +21,7 @@ const DemoLeHero = () => {
 
     useEffect(() => {
         return scrollYProgress.onChange((latest) => {
-            if (latest >= 0.3) {
+            if (latest >= 0.2) {
                 setWords('Blah Blah Blah Blah Blah Lorem Ipsum');
             } else {
                 setWords('Democratizing Legal Assistance');
@@ -28,11 +29,10 @@ const DemoLeHero = () => {
         });
     }, [scrollYProgress]);
 
-    const translateY = useTransform(
-        scrollYProgress,
-        [0.5, 0.7], // change these values for when the transition should occur
-        ["0%", "-40%"]
-    );
+    const translateY =
+        screenWidth < 640
+            ? useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-100%"])
+            : useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-15%"])
 
     return (
         <div className="w-full lg:px-15 overflow-hidden mb-40 min-h-[150vh] sticky top-[5rem]">

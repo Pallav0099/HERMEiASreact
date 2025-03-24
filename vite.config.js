@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss(), react()],
   server: {
-    allowedHosts: ['substantially-till-restricted-conflict.trycloudflare.com'],
+    allowedHosts: ['consider-would-brilliant-articles.trycloudflare.com'],
     base: "/HERMEiASreact/",
   },
 })
