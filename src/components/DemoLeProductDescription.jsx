@@ -1,6 +1,6 @@
 import { TextGenerateEffect } from "../design/TextGenerateEffect"
 import { motion } from "motion/react";
-import PhoneRight from "../assets/PhoneRight.png"
+import PhoneRight from "../assets/PhoneRight2.png"
 
 const listVariants = {
     hidden: { opacity: 0, filter: "blur(20px)" },
@@ -32,7 +32,7 @@ const DemoLeProductDescription = () => {
             </div>
             <div className="grid grid-cols-2 pt-4">
                 <div className="order-2">
-                    <img src={PhoneRight} alt="demole" className="max-h-[35vh]" />
+                    <img src={PhoneRight} alt="demole" className="max-h-[35vh] md:pl-30" />
                 </div>
                 <div className="order-1">
                     <motion.ul
@@ -40,7 +40,7 @@ const DemoLeProductDescription = () => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ margin: "-100px", once: true }}
-                        className="list-disc space-y-3 mb-3 pl-4"
+                        className="list-disc space-y-5 mb-3 pl-4"
                     >
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">

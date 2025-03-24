@@ -37,7 +37,7 @@ const Pricing = () => {
                             </p>
                         </div>
                         <div className="px-3 mt-3 mb-6">
-                            <Button white href="#Mystiko">Free</Button>
+                            <Button white >Free</Button>
                         </div>
                     </motion.div>
 
@@ -71,7 +71,7 @@ const Pricing = () => {
                             </p>
                         </div>
                         <div className="px-3 mt-3 mb-6">
-                            <Button white href="#Mystiko">Rs 299</Button>
+                            <Button white >Rs 299</Button>
                         </div>
                     </motion.div>
 
@@ -104,7 +104,7 @@ const Pricing = () => {
                             </p>
                         </div>
                         <div className="px-3 mt-3 mb-6">
-                            <Button white href="#Mystiko">Rs 799</Button>
+                            <Button white >Rs 799</Button>
                         </div>
                     </motion.div>
 
@@ -138,7 +138,7 @@ const Pricing = () => {
                             </p>
                         </div>
                         <div className="px-3 mt-3 mb-6">
-                            <Button white href="#Mystiko">Rs 1999</Button>
+                            <Button white >Rs 1999</Button>
                         </div>
                     </motion.div>
                 </div>
