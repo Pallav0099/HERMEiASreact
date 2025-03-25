@@ -31,8 +31,8 @@ const DemoLeHero = () => {
 
     const translateY =
         screenWidth < 640
-            ? useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-100%"])
-            : useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-15%"])
+            ? useTransform(scrollYProgress, [0.3, 0.45], ["0%", "-100%"])
+            : useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-25%"])
 
     return (
         <div className="w-full lg:px-15 overflow-hidden mb-40 min-h-[150vh] sticky top-[5rem]">

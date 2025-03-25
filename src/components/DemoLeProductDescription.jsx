@@ -23,14 +23,14 @@ const listItemVariants = {
 const DemoLeProductDescription = () => {
     return (
         <section className="items-center py-5 min-h-[60h] px-[5vw] lg:px-[13.5vw]">
-            <div className="min-h-[50vh] md:min-h-[40vh]">
+            <div className="min-h-[60vh] md:min-h-[40vh]">
 
             </div>
             <div className="max-w-[75vw]">
                 <TextGenerateEffect words={'Heading Heading Heading'} duration={.5} className={"flex text-center text-2xl lg:text-3xl"} />
                 <p className="text-xl motion-preset-slide-up-md mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis velit tincidunt nulla tristique porttitor. Integer mattis, diam efficitur hendrerit elementum, ante mi viverra est, porta viverra nunc nisl sodales nisi. Nullam vel ullamcorper elit. Nulla condimentum ex vitae facilisis vestibulum. </p>
             </div>
-            <div className="grid grid-cols-2 pt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 pt-4">
                 <div className="order-2">
                     <img src={PhoneRight} alt="demole" className="max-h-[35vh] md:pl-30" />
                 </div>
@@ -70,7 +70,6 @@ const DemoLeProductDescription = () => {
                     </motion.ul>
                 </div>
             </div>
-
         </section>
     )
 }
