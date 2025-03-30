@@ -19,7 +19,7 @@ const Pricing = () => {
                             }
                         }}
                         viewport={{ amount: 0.3, once: true }}
-                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
+                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850 hover:scale-105"
                     >
                         <div className="w-full px-3 mt-6 mb-4">
                             <p className="text-2xl font-medium text-white/90">Base Plan</p>
@@ -53,7 +53,7 @@ const Pricing = () => {
                             }
                         }}
                         viewport={{ amount: 0.3, once: true }}
-                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
+                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850 hover:scale-105"
                     >
                         <div className="w-full px-3 mt-6 mb-4">
                             <p className="text-2xl font-medium text-white/90">Individual Plan</p>
@@ -86,7 +86,7 @@ const Pricing = () => {
                             }
                         }}
                         viewport={{ amount: 0.3, once: true }}
-                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
+                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850 hover:scale-105"
                     >
                         <div className="w-full px-3 mt-6 mb-4">
                             <p className="text-2xl font-medium text-white/90">Team Plan</p>
@@ -120,7 +120,7 @@ const Pricing = () => {
                             }
                         }}
                         viewport={{ amount: 0.3, once: true }}
-                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850"
+                        className="min-h-[35vh] lg:min-h-[30vh] group relative grid grid-rows-auto items-center rounded-xl border-1 border-white/8 bg-white/2 px-3 transition-all hover:border-gray-700 hover:bg-gray-850 hover:scale-105"
                     >
                         <div className="w-full px-3 mt-6 mb-4">
                             <p className="text-2xl font-medium text-white/90">Enterprise Plan</p>
