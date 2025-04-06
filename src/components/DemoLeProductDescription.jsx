@@ -22,17 +22,17 @@ const listItemVariants = {
 
 const DemoLeProductDescription = () => {
     return (
-        <section className="items-center py-5 min-h-[60h] px-[5vw] lg:px-[13.5vw]">
-            <div className="min-h-[60vh] md:min-h-[40vh]">
+        <section className="items-center py-5 mx-auto max-w-[90vw] md:max-w-[85vw]">
+            <div className="min-h-[60vh]lg:min-h-[40vh]">
 
             </div>
-            <div className="max-w-[75vw]">
+            <div>
                 <TextGenerateEffect words={'Heading Heading Heading'} duration={.5} className={"flex text-center text-2xl lg:text-3xl"} />
-                <p className="text-xl motion-preset-slide-up-md mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis velit tincidunt nulla tristique porttitor. Integer mattis, diam efficitur hendrerit elementum, ante mi viverra est, porta viverra nunc nisl sodales nisi. Nullam vel ullamcorper elit. Nulla condimentum ex vitae facilisis vestibulum. </p>
+                <p className="text-md md:text-md xl:text-lg motion-preset-slide-up-md mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis velit tincidunt nulla tristique porttitor. Integer mattis, diam efficitur hendrerit elementum, ante mi viverra est, porta viverra nunc nisl sodales nisi. Nullam vel ullamcorper elit. Nulla condimentum ex vitae facilisis vestibulum. </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 pt-4">
                 <div className="order-2">
-                    <img src={PhoneRight} alt="demole" className="max-h-[35vh] md:pl-30" />
+                    <img src={PhoneRight} alt="demole" className="max-h-[22rem] md:pl-30" />
                 </div>
                 <div className="order-1">
                     <motion.ul
@@ -40,7 +40,7 @@ const DemoLeProductDescription = () => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ margin: "-100px", once: true }}
-                        className="list-disc space-y-5 mb-3 pl-4"
+                        className="list-disc space-y-4 mb-3 pl-4 text-sm md:text-md xl:text-lg"
                     >
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">
