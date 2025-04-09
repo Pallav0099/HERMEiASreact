@@ -7,6 +7,7 @@ const DemoLe = () => {
     return (
         <div>
             <Header />
+            <DemoLeHero />
             <DemoLeProductDescription />
             <Pricing />
             <Footer />

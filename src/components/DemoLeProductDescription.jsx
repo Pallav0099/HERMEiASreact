@@ -28,7 +28,7 @@ const DemoLeProductDescription = () => {
             </div>
             <div>
                 <TextGenerateEffect words={'Heading Heading Heading'} duration={.5} className={"flex text-center text-2xl lg:text-3xl"} />
-                <p className="text-md md:text-md xl:text-lg motion-preset-slide-up-md mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis velit tincidunt nulla tristique porttitor. Integer mattis, diam efficitur hendrerit elementum, ante mi viverra est, porta viverra nunc nisl sodales nisi. Nullam vel ullamcorper elit. Nulla condimentum ex vitae facilisis vestibulum. </p>
+                <p className="text-md md:text-md xl:text-lg motion-preset-slide-up-md mt-3">"Our AI-powered model simplifies legal research, answers legal queries, and assists with document generation — in seconds. Built for lawyers, students, businesses, and individuals seeking fast, accurate legal guidance."</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 pt-4">
                 <div className="order-2">
@@ -44,22 +44,22 @@ const DemoLeProductDescription = () => {
                     >
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">
-                                <strong>Privacy is a Human Right</strong>: Every conversation you have, every idea you share, should remain your own. We will never compromise your privacy for profit.
+                                <strong>Instant Legal Query Resolution</strong>: Every conversation you have, every idea you share, should remain your own. We will never compromise your privacy for profit.
                             </p>
                         </motion.li>
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">
-                                <strong>Transparency is Key</strong>: You deserve to know how your data is handled. Our systems are open, our policies are clear, and we commit to never selling your data to anyone.
+                                <strong>AI-powered Document Drafting</strong>: You deserve to know how your data is handled. Our systems are open, our policies are clear, and we commit to never selling your data to anyone.
                             </p>
                         </motion.li>
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">
-                                <strong>Encryption is Essential</strong>: From end-to-end encryption to cutting-edge security protocols, we ensure that your work stays private — even from us.
+                                <strong>Case Law & Statute Search</strong>: From end-to-end encryption to cutting-edge security protocols, we ensure that your work stays private — even from us.
                             </p>
                         </motion.li>
                         <motion.li variants={listItemVariants}>
                             <p className="text-white/90">
-                                <strong>Freedom from Ads</strong>: Our apps are built without the distractions of invasive ads. The only thing we'll ever ask for is your trust.
+                                <strong>Secure & Private Communication</strong>: Our apps are built without the distractions of invasive ads. The only thing we'll ever ask for is your trust.
                             </p>
                         </motion.li>
                         <motion.li variants={listItemVariants}>
