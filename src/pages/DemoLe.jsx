@@ -9,7 +9,6 @@ const DemoLe = () => {
             <Header />
             <DemoLeHero />
             <DemoLeProductDescription />
-            <Pricing />
             <Footer />
         </div>
     );
