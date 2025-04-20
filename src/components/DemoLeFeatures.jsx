@@ -1,7 +1,6 @@
 'use client'
 import { motion } from "framer-motion";
 import { Brain, Shield, Clock, MessageSquare, FileText, Zap } from "lucide-react";
-import PhoneRight from "../assets/PhoneRight2.png";
 
 const features = [
     {
@@ -19,7 +18,7 @@ const features = [
     {
         icon: Clock,
         title: "24/7 Availability",
-        description: "Round-the-clock legal assistance at your convenience without the constraints of traditional office hours",
+        description: "Round-the-clock legal assistance without the constraints of traditional office hours",
         color: "from-amber-500/20 to-amber-600/20"
     },
     {
@@ -37,14 +36,16 @@ const features = [
     {
         icon: Zap,
         title: "Lightning Fast",
-        description: "Get blazing fast responses and document analysis in seconds, not hours or days at your fingertips",
+        description: "Get instant responses and document analysis in seconds, not hours or days",
         color: "from-indigo-500/20 to-indigo-600/20"
     }
 ];
 
-const DemoLeProductDescription = () => {
+const DemoLeFeatures = () => {
     return (
-        <section className="w-full py-24 relative overflow-hidden">
+        <section className="w-full py-24 bg-black relative overflow-hidden">
+            <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+            
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -54,54 +55,12 @@ const DemoLeProductDescription = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                        Revolutionizing Legal Assistance
+                        Powerful Features for Modern Legal Needs
                     </h2>
                     <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                        Experience the future of legal assistance with our AI-powered platform that combines cutting-edge technology with user-friendly design
+                        Experience the future of legal assistance with our comprehensive suite of AI-powered tools
                     </p>
                 </motion.div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="relative"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl" />
-                        <div className="relative bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                            <h3 className="text-2xl font-semibold text-white mb-4">Smart Legal Assistant</h3>
-                            <p className="text-white/70 mb-6">
-                                Our AI-powered legal assistant understands your needs and provides accurate, context-aware responses. Whether you're drafting documents, analyzing contracts, or seeking legal advice, DemoLe is your 24/7 legal companion.
-                            </p>
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                                    <p className="text-white/70">Natural language understanding</p>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                                    <p className="text-white/70">Context-aware responses</p>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 rounded-full bg-blue-500" />
-                                    <p className="text-white/70">Continuous learning and improvement</p>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="flex justify-center"
-                    >
-                        <img src={PhoneRight} alt="DemoLe App Interface" className="max-h-[32rem] object-contain" />
-                    </motion.div>
-                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
@@ -129,4 +88,4 @@ const DemoLeProductDescription = () => {
     );
 };
 
-export default DemoLeProductDescription;
+export default DemoLeFeatures; 

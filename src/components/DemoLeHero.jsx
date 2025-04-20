@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Canvas } from "@react-three/fiber";
 import DemoLePhone from "../design/DemoLePhone";
@@ -9,56 +9,65 @@ import { ShootingStars } from "../design/ShootingStars";
 import { TextGenerateEffect } from "../design/TextGenerateEffect";
 
 const DemoLeHero = () => {
-    // Get the overall scroll progress
-    const { scrollYProgress } = useScroll();
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end start"]
+    });
     const [words, setWords] = useState("Democratizing Legal Assistance");
-    const [screenWidth] = useState(window.innerWidth);
+    const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
-    {/**  DEV NOTES
-    Create a transform for the canvas container's Y translation.
-    Here we keep it at 0% until scrollYProgress is 0.5, then smoothly move it up.
-    Adjust the range values ("0%", "-100%") as needed for your effect. */}
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         return scrollYProgress.onChange((latest) => {
             if (latest >= 0.2) {
-                setWords('Blah Blah Blah Blah Blah Lorem Ipsum');
+                setWords('AI-Powered Legal Assistant');
             } else {
                 setWords('Democratizing Legal Assistance');
             }
         });
     }, [scrollYProgress]);
 
-    const translateY =
-        screenWidth < 640
-            ? useTransform(scrollYProgress, [0.3, 0.45], ["0%", "-100%"])
-            : useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-25%"])
+    const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0, -100]);
 
     return (
-        <div className="w-full lg:px-15 overflow-hidden mb-40 min-h-[150vh] sticky top-[5rem]">
-            <div className="absolute inset-0 z-0 pointer-events-none">
+        <div 
+            ref={containerRef} 
+            className="w-full min-h-[90vh] relative overflow-hidden"
+        >
+            <div className="fixed inset-0 z-0 pointer-events-none">
                 <Spotlight />
             </div>
-            <motion.div style={{ translateY }} className="grid grid-cols-1 md:grid-cols-2 overflow-visible">
-                <div className="order-2 md:order-1 flex items-center align-middle justify-center max-w-7xl mx-auto space-y-1 md:pl-[7vw] xl:pl-[10vw]">
-                    <TextGenerateEffect
-                        key={words}
-                        words={words}
-                        duration={1.5}
-                        delay={0.3}
-                        className="text-center md:text-left text-3xl lg:text-4xl xl:text-6xl font-semibold text-white/90 motion-blur-in-2xl motion-opacity-in-0 motion-duration-1500"
-                    />
-                </div>
-                <div
-                    className="order-1 md:order-2 min-h-[70vh]"
-                >
-                    <Canvas>
-                        <DemoLePhone shadows />
-                    </Canvas>
+            <motion.div 
+                style={{ y }} 
+                className="relative z-10 h-[90vh]"
+            >
+                <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+                    <div className="order-2 md:order-1 flex items-center justify-center max-w-6xl mx-auto space-y-4 md:pl-[7vw] xl:pl-[10vw] px-4">
+                        <TextGenerateEffect 
+                            key={words}
+                            words={words}
+                            duration={1.5}
+                            delay={0.3}
+                            className="text-center md:text-left text-3xl lg:text-4xl xl:text-6xl font-semibold text-white/90"
+                        />
+                    </div>
+                    <div className="order-1 md:order-2 h-[80vh] relative">
+                        <Canvas className="w-full h-full">
+                            <DemoLePhone shadows scale={0.9} />
+                        </Canvas>
+                    </div>
                 </div>
             </motion.div>
-            <StarsBackground />
-            <ShootingStars />
+            <div className="fixed inset-0 z-0 pointer-events-none">
+                <StarsBackground />
+                <ShootingStars />
+            </div>
         </div>
     );
 };
