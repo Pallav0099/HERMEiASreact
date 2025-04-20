@@ -18,6 +18,6 @@ export const navigation = [
     {
         id: "3",
         title: "Contact",
-        url: "#contact",
+        url: "/contact",
     },
 ];

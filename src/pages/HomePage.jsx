@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Pricing from "../components/Pricing";
 import Testimonials from "../components/Testimonials";
 import Stats from "../components/Stats";
+import Values from "../components/Values";
 
 const HomePage = () => {
     return (
@@ -14,8 +15,7 @@ const HomePage = () => {
                 <Hero />
                 <Products />
                 <Stats />
-                <Testimonials />
-                <Pricing />
+                <Values />
             </main>
             <Footer />
         </div>

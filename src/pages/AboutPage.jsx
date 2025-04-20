@@ -10,8 +10,8 @@ const AboutPage = () => {
             <StarsBackground />
             <Header />
             <main>
-                <About />
                 <Values />
+                <About />
             </main>
             <Footer />
         </div>

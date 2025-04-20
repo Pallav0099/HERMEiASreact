@@ -4,7 +4,7 @@ const Footer = () => {
             <nav className="grid grid-flow-col gap-4">
                 <a href="#products" className="link link-hover">Products</a>
                 <a href="/about" className="link link-hover">About us</a>
-                <a href="#contact" className="link link-hover">Contact</a>
+                <a href="/contact" className="link link-hover">Contact</a>
             </nav>
             <nav>
                 <div className="grid grid-flow-col gap-4">
