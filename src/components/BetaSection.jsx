@@ -7,7 +7,7 @@ const BetaSection = () => {
     const daysUntilRelease = Math.ceil((releaseDate - today) / (1000 * 60 * 60 * 24));
 
     return (
-        <motion.section 
+        <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -32,7 +32,7 @@ const BetaSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -61,7 +61,7 @@ const BetaSection = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -102,14 +102,18 @@ const BetaSection = () => {
                                 </li>
                             </ul>
                             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                                <button className="w-full sm:w-auto bg-white text-black font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2">
+                                <a
+                                    className="w-full sm:w-auto bg-white text-black font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2"
+                                    href="/contact"
+                                >
                                     Request Beta Access
                                     <ArrowRight className="w-4 h-4" />
-                                </button>
-                                <button className="w-full sm:w-auto border border-white/30 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                                </a>
+
+                                {/* <button className="w-full sm:w-auto border border-white/30 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
                                     Learn More
                                     <ArrowRight className="w-4 h-4" />
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </motion.div>
