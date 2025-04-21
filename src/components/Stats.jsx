@@ -4,8 +4,8 @@ import { Users, Clock, FileText, Zap } from "lucide-react";
 const stats = [
     {
         icon: Users,
-        value: "10K+",
-        label: "Active Users",
+        value: "Beta",
+        label: "Testing Upcoming",
         description: "Legal professionals using our platform"
     },
     {
@@ -16,13 +16,13 @@ const stats = [
     },
     {
         icon: FileText,
-        value: "1M+",
+        value: "10k+",
         label: "Documents Analyzed",
         description: "Legal documents processed daily"
     },
     {
         icon: Zap,
-        value: "99.9%",
+        value: "99%",
         label: "Accuracy",
         description: "In legal analysis and predictions"
     }
