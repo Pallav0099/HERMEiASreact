@@ -32,11 +32,23 @@ const OurTeam = () => {
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
+    {
+      name: "Ishita Singh",
+      role: "Upcoming",
+      avatarUrl:
+        "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+    },
+    {
+      name: "Dinesh Aswin S",
+      role: "Upcoming",
+      avatarUrl:
+        "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+    },
     
   ];
 
   return (
-    <section className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:grid-cols-5">
+    <section className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:grid-cols-4">
       {teamMembers.map((member, index) => (
         <motion.div
           key={member.name}
