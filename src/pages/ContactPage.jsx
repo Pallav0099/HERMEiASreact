@@ -54,12 +54,12 @@ const ContactPage = () => {
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                                            <p className="text-white/70">+91 999999999</p>
+                                            <p className="text-white/70">+1 607-698-0322</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="group bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300">
+                                {/* <div className="group bg-black/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300">
                                     <div className="flex items-start space-x-4">
                                         <div className="p-3 bg-white/10 rounded-lg">
                                             <MapPin className="w-6 h-6 text-white" />
@@ -69,7 +69,7 @@ const ContactPage = () => {
                                             <p className="text-white/70">Suryansh ka ghar</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </motion.div>
 
                             {/* Contact Form - Commented out for now

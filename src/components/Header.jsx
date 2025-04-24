@@ -38,7 +38,7 @@ const Header = () => {
                 </a>
                 <nav
                     className={`${openNavigation ? "flex" : "hidden"
-                        } fixed top-[5rem] left-0 right-0 bottom-0 bg-black/95 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+                        } fixed top-[5rem] left-0 right-0 bottom-0 bg-black/95 lg:static lg:flex lg:ml-97 lg:bg-transparent`}
                 >
                     <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
                         {navigation.map((item) => (
@@ -60,7 +60,7 @@ const Header = () => {
                     <HamburgerMenu />
                 </nav>
 
-                <a
+                {/* <a
                     href="#signup"
                     className="button hidden mr-8 text-white/50 transition-colors hover:text-white lg:block"
                 >
@@ -68,7 +68,7 @@ const Header = () => {
                 </a>
                 <div className="hidden lg:flex">
                     <Button white href="#signin">SIGN IN</Button>
-                </div>
+                </div> */}
 
                 <Button
                     className="ml-auto lg:hidden"

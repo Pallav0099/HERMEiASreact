@@ -13,9 +13,6 @@ const About = () => {
             <StaggeredList />
             <Content2 />
           </div>
-          <div className="col-span-2 md:col-span-4 lg:col-span-4">
-            <OurTeam />
-          </div>
         </div>
       </div>
     </section>

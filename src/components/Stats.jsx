@@ -8,24 +8,24 @@ const stats = [
         label: "Testing Upcoming",
         description: "Legal professionals using our platform"
     },
-    {
-        icon: Clock,
-        value: "50%",
-        label: "Time Saved",
-        description: "Average reduction in research time"
-    },
-    {
-        icon: FileText,
-        value: "10k+",
-        label: "Documents Analyzed",
-        description: "Legal documents processed daily"
-    },
-    {
-        icon: Zap,
-        value: "99%",
-        label: "Accuracy",
-        description: "In legal analysis and predictions"
-    }
+    // {
+    //     icon: Clock,
+    //     value: "50%",
+    //     label: "Time Saved",
+    //     description: "Average reduction in research time"
+    // },
+    // {
+    //     icon: FileText,
+    //     value: "10k+",
+    //     label: "Documents Analyzed",
+    //     description: "Legal documents processed daily"
+    // },
+    // {
+    //     icon: Zap,
+    //     value: "99%",
+    //     label: "Accuracy",
+    //     description: "In legal analysis and predictions"
+    // }
 ];
 
 const Stats = () => {
@@ -40,14 +40,14 @@ const Stats = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        By the Numbers
+                        Production Stage
                     </h2>
-                    <p className="text-xl text-white/70 max-w-2xl mx-auto">
+                    {/* <p className="text-xl text-white/70 max-w-2xl mx-auto">
                         Our impact in transforming legal research and analysis
-                    </p>
+                    </p> */}
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 gap-8">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
@@ -62,7 +62,7 @@ const Stats = () => {
                                 <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
                                     <stat.icon className="w-6 h-6 text-white" />
                                 </div>
-                                <h3 className="text-4xl font-bold text-white mb-2">{stat.value}</h3>
+                                <a href="/DemoLe#Beta"><h3 className="text-4xl font-bold text-white mb-2">{stat.value}</h3></a>
                                 <p className="text-lg font-semibold text-white mb-2">{stat.label}</p>
                                 <p className="text-white/60">{stat.description}</p>
                             </div>
