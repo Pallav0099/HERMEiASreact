@@ -34,13 +34,13 @@ const OurTeam = () => {
     },
     {
       name: "Ishita Singh",
-      role: "Upcoming",
+      role: "PR/Marketing",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
     {
       name: "Dinesh Aswin S",
-      role: "Upcoming",
+      role: "Cyber Security",
       avatarUrl:
         "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     },
